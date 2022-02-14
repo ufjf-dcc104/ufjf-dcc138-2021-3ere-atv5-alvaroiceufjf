@@ -18,9 +18,18 @@ export default class Sprite{
 
     }
 
-    passo(dt){
+    controlar(dt){
+
+    }
+
+    mover(dt){
         this.x = this.x + this.vx*dt;
         this.y = this.y + this.vy*dt;
+    }
+
+    passo(dt){
+        this.controlar(dt);
+        this.mover(dt);
     }
     colidiuCom(outro){
         return !(
