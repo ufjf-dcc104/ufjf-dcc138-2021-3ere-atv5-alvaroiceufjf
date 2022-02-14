@@ -3,13 +3,21 @@ import Mapa from "./Mapa.js";
 import Cena from "./Cena.js";
 import {Dungeon as modeloDungeon} from "../maps/Dungeon.js"
 import Sprite from "./Sprite.js";
+import InputManager from "./InputManager.js";
 
+const input = new InputManager();
 const assets = new AssetManager();
 
 const canvas = document.querySelector("canvas");
 canvas.width = 14*32;
 canvas.height = 10*32;
 const ctx = canvas.getContext("2d");
+input.configurarTeclado({
+    "ArrowLeft":"MOVE_ESQUERDA",
+    "ArrowRight":"MOVE_DIREITA",
+    "ArrowUp":"MOVE_CIMA",
+    "ArrowDown":"MOVE_BAIXO"
+});
 const cena1 = new Cena(canvas,assets);
 const Dungeon = new Mapa(10,14,32);
 Dungeon.carregaMapa(modeloDungeon);
