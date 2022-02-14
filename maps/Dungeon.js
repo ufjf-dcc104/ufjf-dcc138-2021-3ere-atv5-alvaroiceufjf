@@ -13,4 +13,4 @@ const Dungeon =[
     [1,0,0,0,0,0,0,0,0,0,0,0,0,1]
 ];
 
-export default Dungeon;
+export {Dungeon};
