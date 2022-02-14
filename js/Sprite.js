@@ -1,7 +1,7 @@
 export default class Sprite{
 
     //Modela algo que se move na tela
-    constructor({x=100,y=100,w=20,h=20,color="white",vx=0,vy=0}={}){
+    constructor({x=100,y=100,w=18,h=32,color="orangered",vx=0,vy=0}={}){
         this.x = x;
         this.y = y;
         this.vx = vx;
